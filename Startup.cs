@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.SpaServices.Webpack;
+using xiangmu.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace xiangmu
 {
@@ -34,6 +36,9 @@ namespace xiangmu
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=DemoDb;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<UserContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

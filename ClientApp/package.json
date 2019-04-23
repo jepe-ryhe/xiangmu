@@ -1,8 +1,8 @@
 {
-  "name": "clientapp",
+  "name": "pharmacy",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "何睿扬 <heruiyang@outlook.com>",
+  "author": "damian <593700742@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -14,8 +14,16 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "crypto": "^1.0.1",
+    "element-ui": "^2.7.2",
+    "js-md5": "^0.7.3",
+    "moment": "^2.24.0",
+    "qs": "^6.7.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-axios": "^2.1.4",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
     "aspnet-webpack": "^3.0.0",
